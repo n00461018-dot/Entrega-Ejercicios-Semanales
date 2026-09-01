@@ -23,4 +23,6 @@ match operador:
         else:
             div = num1/num2           
             print(f"La división de {num1} entre {num2} es {div}. ({num1} / {num2} = {div})")     
+    case _:
+        print("Seleccione un número de operación valido.") 
     
