@@ -13,4 +13,5 @@ def calcular_descuento(precio, porcentaje):
 precioUser = float(input("Ingrese el precio del producto: "))
 porcDesc = int(input("Ingrese el porcentaje de descuento (%): "))
 
-print(f"El precio final después del descuento es {calcular_descuento(precioUser, porcDesc)}.")
+print(f"El precio final después del descuento es de S/. {calcular_descuento(precioUser, porcDesc)} soles.")
+print(f"Ahorraste S/. {precioUser - calcular_descuento(precioUser, porcDesc)} soles.")
