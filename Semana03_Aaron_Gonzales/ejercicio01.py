@@ -7,7 +7,7 @@ final después del descuento. Luego muestra el ahorro obtenido
 def calcular_descuento(precio, porcentaje):
     descuento = porcentaje * 0.01
     ahorro = precio * descuento
-    precioFinal = precio - (ahorro)
+    precioFinal = precio - ahorro
     return precioFinal
 
 precioUser = float(input("Ingrese el precio del producto: "))
