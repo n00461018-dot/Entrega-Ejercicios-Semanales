@@ -14,7 +14,10 @@ def es_par(numero):
     return compBool
 
 def mostrar_paridad(numero):
-    print(f"El número es {es_par(numero)}")
+    if es_par(numero):
+        print(f"El número {num} es par.")
+    else:
+        print(f"El número {num} es impar.")
     
 num = int(input("Ingrese un número: "))
 es_par(num)
