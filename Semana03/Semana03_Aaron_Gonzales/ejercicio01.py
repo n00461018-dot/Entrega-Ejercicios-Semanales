@@ -11,7 +11,14 @@ def calcular_descuento(precio, porcentaje):
     return precioFinal
 
 precioUser = float(input("Ingrese el precio del producto: "))
-porcDesc = int(input("Ingrese el porcentaje de descuento (%): "))
-
-print(f"El precio final después del descuento es de S/. {calcular_descuento(precioUser, porcDesc)} soles.")
-print(f"Ahorraste S/. {precioUser - calcular_descuento(precioUser, porcDesc)} soles.")
+while True:
+    try:
+        porcDesc = int(input("Ingrese el porcentaje de descuento (%): "))
+        if 0 <= porcDesc <= 100:
+            print(f"El precio final después del descuento es de S/. {calcular_descuento(precioUser, porcDesc)} soles.")
+            print(f"Ahorraste S/. {precioUser - calcular_descuento(precioUser, porcDesc)} soles.")
+            break
+        else: 
+            print("Ingrese un valor entre 0 y 100.")
+    except ValueError:
+        print("ERROR: Ingrese un valor númerico.")
