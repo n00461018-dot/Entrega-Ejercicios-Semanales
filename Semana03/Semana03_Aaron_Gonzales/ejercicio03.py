@@ -26,13 +26,18 @@ while True:
         notas = float(input("Ingrese la(s) nota(s) del alumno: "))
         if 0 <= notas <= 20:
             listNotas.append(notas)
-            continuar = input("¿Desea ingresar más notas? (s/n): ")
-            if continuar != "s":
+            continuar = input("¿Desea ingresar más notas? (s/n): ").lower()
+            if continuar == "n":
                 break
+            elif continuar == "s":
+                continue
+            else:
+                print("Ingrese una opción valida.")
         else: 
             print("Ingresa un número entre 0 y 20")
     except ValueError:
         print("Ingresa un valor valido ")
-
+        
+     
 calcular_promedio(listNotas)
 mostrar_resultado(alumNombre, listNotas)    
