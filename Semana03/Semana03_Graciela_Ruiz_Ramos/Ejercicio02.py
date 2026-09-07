@@ -8,7 +8,7 @@ el resultado en pantalla con un mensaje .
 """
 #RESOLUCIÓN
 
-numero = int(input("Ingrese un número: "))
+print ("\n========= VERIFICADOR DE NUMERO PAR O IMPAR =========\n")
 
 def es_par(numero):
     if numero % 2 == 0:
@@ -16,13 +16,22 @@ def es_par(numero):
     else:
         return False
 
+while True:
+    try:
+        numero = int(input("Ingrese un número: "))
+    except ValueError:
+        print("Error: ingrese solamente un número entero.")
+        continue
 
-def mostrar_paridad(numero):
-    if es_par(numero):
-        print(f"El número {numero} es par.")
-    else:
-        print(f"El número {numero} es impar.")
+    def mostrar_paridad(numero):
+        if es_par(numero):
+            print(f"\nEl número {numero} es par.")
+            print("\n" + "=" * 54)
+        else:
+            print(f"\nEl número {numero} es impar.")
+            print("\n" + "=" * 54)
 
+    break
 mostrar_paridad(numero)
 
 
