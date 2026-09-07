@@ -4,10 +4,12 @@ la nota mínima y la nota máxima. Además crea una función mostrar_resultado(n
 que muestre un reporte formateado
 """
 def calcular_promedio(notas):
+    
     promedio = sum(notas) / len(notas)
     return promedio
 
 def mostrar_resultado(nombre, notas):
+    
     print("")
     print("="*60)
     print("\t\tREPORTE DE NOTAS DEL ALUMNO")
@@ -22,6 +24,7 @@ alumNombre = input("Ingrese el nombre del alumno: ")
 listNotas = []
 
 while True:
+    
     try:
         notas = float(input("Ingrese la(s) nota(s) del alumno: "))
         if 0 <= notas <= 20:
