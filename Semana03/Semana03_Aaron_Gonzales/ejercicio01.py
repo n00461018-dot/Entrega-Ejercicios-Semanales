@@ -9,8 +9,16 @@ def calcular_descuento(precio, porcentaje):
     ahorro = precio * descuento
     precioFinal = precio - ahorro
     return precioFinal
-
-precioUser = float(input("Ingrese el precio del producto: "))
+while True:
+    try:   
+        precioUser = float(input("Ingrese el precio del producto: "))
+        if precioUser <= 0:
+            print("Ingrese un precio mayor que 0.")
+        else: 
+            break
+    except ValueError:
+        print("ERROR: Ingresa un valor válido")
+        
 while True:
     try:
         porcDesc = int(input("Ingrese el porcentaje de descuento (%): "))
