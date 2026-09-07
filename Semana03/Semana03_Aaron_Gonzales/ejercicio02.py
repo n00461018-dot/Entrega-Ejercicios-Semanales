@@ -19,6 +19,12 @@ def mostrar_paridad(numero):
     else:
         print(f"El número {num} es impar.")
     
-num = int(input("Ingrese un número: "))
+while True:    
+    try:
+        num = int(input("Ingrese un número: "))
+        break
+    except ValueError:
+        print("ERROR: Ingrese un valor númerico no decimal.")
+        
 es_par(num)
 mostrar_paridad(num)
