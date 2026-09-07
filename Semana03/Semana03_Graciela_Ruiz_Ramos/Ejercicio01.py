@@ -5,7 +5,8 @@ que reciba el precio original de un producto y el porcentaje de descuento,
 y retorne el precio final después del descuento.
 Luego muestra el ahorro obtenido.
 """
-__author__ = "Graciela Ruiz Ramos"
+
+print ("\n================= CALCULADORA DE DESCUENTOS =================\n")
 
 def calcular_descuento(precio, porcentaje):
     descuento = precio * (porcentaje / 100)
@@ -38,8 +39,11 @@ while True:
         break
 
     precio_final, ahorro = calcular_descuento(precio, porcentaje)
-    
-    print(f"El precio final es: {precio_final:.2f}")
-    print(f"El ahorro obtenido es: {ahorro:.2f}")
 
+    print ("\n======================== RESULTADO ==========================\n")
+    
+    print(f"El precio final es     : {precio_final:.2f}")
+    print(f"El ahorro obtenido es  : {ahorro:.2f}")
+
+    print ("\n" + "=" * 62)
     break
