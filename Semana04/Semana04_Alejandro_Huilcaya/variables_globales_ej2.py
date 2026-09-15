@@ -3,4 +3,6 @@ def procesar(dato):
     if MODO_DEBUG: # lectura sin 'global'
         print(f"[DEBUG] Procesando: {dato}")
     return dato.upper()
-procesar("hola") # [DEBUG] Procesando: hola
+print(procesar("hola")) # Asignar el retorno de la funcion
+MODO_DEBUG = False     # Desactivar el DEBUG
+print(procesar("adios")) 
