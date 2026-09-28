@@ -11,18 +11,22 @@ def visitar(lista, url):
     lista.append(url)
     print(lista)
     
+def retroceder(lista):
+    eliminar = lista.pop(-1)
+    print(lista)
+    
 paginas_web = []
 
-web = input("Ingrese una página web: ")
-visitar(paginas_web, web)
-    
 while True:
-    continuar = input("¿Desea agregar otra página web? (s/n): ").lower()
-    if continuar == "s":
-        continue
-    elif continuar == "n":
+    web = input("Ingrese una página web: ")
+    visitar(paginas_web, web)
+    while True:
+        continuar = input("¿Desea agregar otra página web? (s/n): ").lower()
+        if continuar == "s" or continuar == "n":
+            break
+        else:
+            print("ERROR: Ingrese 's' para SÍ o 'n' para NO")
+    if continuar == "n":
         break
-    else: 
-        print("ERROR: Ingrese 's' para SÍ o 'n' para NO")
-    
- 
+           
+        
