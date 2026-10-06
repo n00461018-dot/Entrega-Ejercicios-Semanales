@@ -1,0 +1,20 @@
+"""
+Enunciado 6 – CENSURAR PALABRA EN UN TEXTO:
+Dada una lista de palabras prohibidas, reemplaza cada aparición en un texto por asteriscos del mismo largo.
+"""
+
+prohibidas=["manzana","pera","mandarina"]
+
+texto="Ayer me comi una pera, luego de eso una manzana y una mandarina"
+
+def censurar(texto,prohibidas):
+    
+    limpio=texto
+    
+    for palabra in prohibidas:
+        
+        limpio=limpio.replace(palabra,"*"*len(palabra))
+        
+    return limpio  
+        
+print(censurar(texto,prohibidas))
