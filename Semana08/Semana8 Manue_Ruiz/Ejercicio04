@@ -1,0 +1,29 @@
+"""
+04 – Lista de Diccionario de Estudiantes
+
+Crea una lista de diccionarios para 4 estudiantes con los campos: 'nombre', 'carrera' y 'promedio'.
+Imprime el nombre y promedio de cada estudiante.
+Luego muestra el nombre del estudiante con el promedio más alto.
+""" 
+
+estudiantes = [
+    {'nombre': 'Carlos', 'carrera': 'Computación', 'promedio': 16},
+    {'nombre': 'Ana', 'carrera': 'Sistemas', 'promedio': 18},
+    {'nombre': 'Luis', 'carrera': 'Informática', 'promedio': 14},
+    {'nombre': 'Mia', 'carrera': 'Computación', 'promedio': 17}
+]
+
+mayor_promedio = estudiantes[0]
+
+print('REPORTE DE ESTUDIANTES')
+print('-'*30)
+
+for estudiante in estudiantes:
+    print('Nombre:', estudiante['nombre'], '- Promedio:', estudiante['promedio'])
+
+    if estudiante['promedio'] > mayor_promedio['promedio']:
+        mayor_promedio = estudiante
+
+print('-'*30)
+print('Estudiante con mayor promedio:', mayor_promedio['nombre'])
+print('Promedio más alto:', mayor_promedio['promedio'])
