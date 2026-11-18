@@ -40,4 +40,4 @@ else:
     print("--- REPORTE DE NOTAS ---")
     print(f"Promedio general: {promedio_general:.2f}")
     print(f"Top alumno: {top_alumno['nombre']} con promedio: {promedio_top:.2f}")
-    print(f"Cantidad de aprobados (≥ 13): {aprobados}")
+    print(f"Cantidad de aprobados: {aprobados}")
